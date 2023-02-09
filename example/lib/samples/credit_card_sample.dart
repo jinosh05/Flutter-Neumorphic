@@ -30,7 +30,7 @@ class _PageContent extends StatefulWidget {
 }
 
 class __PageContentState extends State<_PageContent> {
-  int _dotIndex = 1;
+  int? _dotIndex = 1;
   bool _useDark = false;
 
   @override
@@ -235,7 +235,7 @@ class __PageContentState extends State<_PageContent> {
                 setState(() {
                   _useDark = !_useDark;
 
-                  NeumorphicTheme.of(context).themeMode =
+                  NeumorphicTheme.of(context)!.themeMode =
                       _useDark ? ThemeMode.dark : ThemeMode.light;
                 });
               },
@@ -326,7 +326,7 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 0,
-            onChanged: (value) {
+            onChanged: (dynamic value) {
               setState(() {
                 _dotIndex = value;
               });
@@ -346,7 +346,7 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 1,
-            onChanged: (value) {
+            onChanged: (dynamic value) {
               setState(() {
                 _dotIndex = value;
               });
@@ -366,7 +366,7 @@ class __PageContentState extends State<_PageContent> {
           child: NeumorphicRadio(
             groupValue: _dotIndex,
             value: 2,
-            onChanged: (value) {
+            onChanged: (dynamic value) {
               setState(() {
                 _dotIndex = value;
               });

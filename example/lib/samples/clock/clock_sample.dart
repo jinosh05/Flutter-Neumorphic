@@ -229,11 +229,11 @@ class NeumorphicClock extends StatelessWidget {
   }
 
   Widget _buildLine(
-      {BuildContext context,
-      double angle,
-      double width,
+      {BuildContext? context,
+      required double angle,
+      required double width,
       double height = 6,
-      Color color}) {
+      Color? color}) {
     return Transform.rotate(
       angle: angle,
       child: Center(

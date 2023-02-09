@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class CheckboxWidgetPage extends StatefulWidget {
-  CheckboxWidgetPage({Key key}) : super(key: key);
+  CheckboxWidgetPage({Key? key}) : super(key: key);
 
   @override
   createState() => _WidgetPageState();
@@ -70,9 +70,9 @@ class _DefaultWidget extends StatefulWidget {
 }
 
 class _DefaultWidgetState extends State<_DefaultWidget> {
-  bool check1 = false;
-  bool check2 = false;
-  bool check3 = false;
+  bool? check1 = false;
+  bool? check2 = false;
+  bool? check3 = false;
 
   Widget _buildCode(BuildContext context) {
     return Code("""
@@ -101,7 +101,7 @@ NeumorphicCheckbox(
           ),
           SizedBox(width: 12),
           NeumorphicCheckbox(
-            value: check1,
+            value: check1!,
             onChanged: (value) {
               setState(() {
                 check1 = value;
@@ -110,7 +110,7 @@ NeumorphicCheckbox(
           ),
           SizedBox(width: 12),
           NeumorphicCheckbox(
-            value: check2,
+            value: check2!,
             onChanged: (value) {
               setState(() {
                 check2 = value;
@@ -119,7 +119,7 @@ NeumorphicCheckbox(
           ),
           SizedBox(width: 12),
           NeumorphicCheckbox(
-            value: check3,
+            value: check3!,
             onChanged: (value) {
               setState(() {
                 check3 = value;
@@ -150,9 +150,9 @@ class _ColorWidget extends StatefulWidget {
 class _ColorWidgetState extends State<_ColorWidget> {
   Color customColor = Colors.green;
 
-  bool checkColor1 = false;
-  bool checkColor2 = false;
-  bool checkColor3 = false;
+  bool? checkColor1 = false;
+  bool? checkColor2 = false;
+  bool? checkColor3 = false;
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
@@ -175,7 +175,7 @@ class _ColorWidgetState extends State<_ColorWidget> {
           SizedBox(width: 12),
           NeumorphicCheckbox(
             style: NeumorphicCheckboxStyle(selectedColor: customColor),
-            value: checkColor1,
+            value: checkColor1!,
             onChanged: (value) {
               setState(() {
                 checkColor1 = value;
@@ -185,7 +185,7 @@ class _ColorWidgetState extends State<_ColorWidget> {
           SizedBox(width: 12),
           NeumorphicCheckbox(
             style: NeumorphicCheckboxStyle(selectedColor: customColor),
-            value: checkColor2,
+            value: checkColor2!,
             onChanged: (value) {
               setState(() {
                 checkColor2 = value;
@@ -194,7 +194,7 @@ class _ColorWidgetState extends State<_ColorWidget> {
           ),
           SizedBox(width: 12),
           NeumorphicCheckbox(
-            value: checkColor3,
+            value: checkColor3!,
             style: NeumorphicCheckboxStyle(selectedColor: customColor),
             onChanged: (value) {
               setState(() {
@@ -243,8 +243,8 @@ class _EnabledDisabledWidget extends StatefulWidget {
 }
 
 class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
-  bool check1 = false;
-  bool check2 = false;
+  bool? check1 = false;
+  bool? check2 = false;
 
   Widget _buildWidget(BuildContext context) {
     return Padding(
@@ -257,7 +257,7 @@ class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
           ),
           SizedBox(width: 12),
           NeumorphicCheckbox(
-            value: check1,
+            value: check1!,
             onChanged: (value) {
               setState(() {
                 check1 = value;
@@ -272,7 +272,7 @@ class _EnabledDisabledWidgetState extends State<_EnabledDisabledWidget> {
           SizedBox(width: 12),
           NeumorphicCheckbox(
             isEnabled: false,
-            value: check2,
+            value: check2!,
             onChanged: (value) {
               setState(() {
                 check2 = value;
