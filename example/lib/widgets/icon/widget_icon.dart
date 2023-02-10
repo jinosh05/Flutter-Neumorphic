@@ -1,6 +1,5 @@
 import 'package:example/lib/ThemeConfigurator.dart';
 import 'package:example/lib/top_bar.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class IconWidgetPage extends StatefulWidget {
@@ -741,7 +740,7 @@ class _PageState extends State<_Page> {
     Icons.picture_in_picture,
     Icons.picture_in_picture_alt,
     Icons.pie_chart,
-    Icons.pie_chart_outlined,
+    Icons.pie_chart_outline_outlined,
     Icons.pin_drop,
     Icons.place,
     Icons.play_arrow,

@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class ButtonSample extends StatefulWidget {
@@ -42,13 +41,13 @@ class __PageState extends State<_Page> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
               child: Text("back"),
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed: () {
                 setState(() {
                   _useDark = !_useDark;
