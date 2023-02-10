@@ -104,7 +104,7 @@ class __PageState extends State<_Page> {
   int selectedConfiguratorIndex = 0;
 
   Widget _configurators() {
-    final Color buttonActiveColor = Theme.of(context).accentColor;
+    final Color buttonActiveColor = Theme.of(context).colorScheme.secondary;
     final Color buttonInnactiveColor = Colors.white;
 
     final Color textActiveColor = Colors.white;

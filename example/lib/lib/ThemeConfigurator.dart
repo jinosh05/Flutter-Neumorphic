@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 import 'ThemeColorSelector.dart';
@@ -71,7 +70,8 @@ class _ThemeConfiguratorState extends State<_ThemeConfiguratorDialog> {
   }
 
   Widget intensitySelector() {
-    final intensity = NeumorphicTheme.intensity(widget.contextContainingTheme!)!;
+    final intensity =
+        NeumorphicTheme.intensity(widget.contextContainingTheme!)!;
     return Row(
       children: <Widget>[
         Padding(
