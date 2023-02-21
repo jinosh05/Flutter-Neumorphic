@@ -2,11 +2,11 @@
 
 A complete, ready to use, Neumorphic ui kit for Flutter
 
-[![flutter_logo](./medias/flutter_logo_small.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![flutter_logo](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/flutter_logo_small.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 Try Flutter-Neumorphic on your browser : 👉 https://flutter-neumorphic.firebaseapp.com/ 🌐
 
-[![neumorphic_playground](./medias/playground.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neumorphic_playground](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/playground.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 # ⚙️ Installation
 
@@ -123,11 +123,11 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 ## 👀 Showcases
 
-[![Neumorphic](./medias/samples/sample_form.png)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/samples/sample_clock.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/samples/sample_form.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/samples/sample_clock.png)](https://github.com/Idean/Flutter-Neumorphic)
 
-[![Neumorphic](./medias/samples/sample_galaxy.png)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/samples/sample_widgets.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/samples/sample_galaxy.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/samples/sample_widgets.png)](https://github.com/Idean/Flutter-Neumorphic)
 
 ## 📦 Neumorphic
 
@@ -145,8 +145,8 @@ Neumorphic(
 )
 ```
 
-[![Neumorphic](./medias/neumorphic_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/neumorphic_circle_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/neumorphic_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/neumorphic_circle_container.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 ☝️ Playing with LightSource & Depth
 
@@ -166,10 +166,10 @@ Neumorphic(
 | [BoxShape](#-custom-shape) | Circle, RoundRect(radius), Stadium, Path | The box shape of a Neumorphic element. Stadium : roundrect with cirlces on each side | 
 | [Border](#-accessibility--border) | NeumorphicBorder | A border (color/width) to enhance contrast with background and others elements | 
 
-[![Neumorphic](./medias/doc/depth.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/doc/intensity.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/doc/surface_intensity.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![Neumorphic](./medias/doc/lightsource.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/doc/depth.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/doc/intensity.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/doc/surface_intensity.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/doc/lightsource.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 
 ### 🔧 Shapes
@@ -222,7 +222,7 @@ Neumorphic(
 
 ## Neumorphic Text
 
-[![text](./medias/widgets/text.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![text](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/widgets/text.png)](https://github.com/Idean/Flutter-Neumorphic)
 
 **Text only handle positive depth**
 
@@ -243,7 +243,7 @@ child: NeumorphicText(
 
 ## Neumorphic Icon
 
-[![custom_shape](./medias/neumorphic_icon.png)](https://github.com/Idean/Flutter-Neumorphic)
+[![custom_shape](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/neumorphic_icon.png)](https://github.com/Idean/Flutter-Neumorphic)
 
 ```dart
 child: NeumorphicIcon(
@@ -256,11 +256,11 @@ How to display **SVG** icons ?
 
 Simply use [https://fluttericon.com/](https://fluttericon.com/) to export your svg as .ttf & use NeumorphicIcon(YOUR_ICON) 
 
-[![custom_shape](./medias/flutter_svg.png)](https://fluttericon.com/)
+[![custom_shape](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/flutter_svg.png)](https://fluttericon.com/)
 
 ## 🎨 Custom Shape
 
-[![custom_shape](./medias/custom_shape.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![custom_shape](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/custom_shape.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 Flutter Neumorphic supports custom shapes, just provide a path to 
 
@@ -312,7 +312,7 @@ Neumorphic(
 For design purposes, or simply to enhance accessibility, 
 you can add a border on Neumorphic widgets 
 
-[![Neumorphic](./medias/border.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![Neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/border.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 ```dart
 Neumorphic(
@@ -341,8 +341,8 @@ Note that `borderColor` and `borderWidth` default values has been added to `Neum
 ## 🎨 Neumorphic Theme
 
 
-[![neumorphic_theme](./medias/toggleDark.gif)](https://github.com/Idean/Flutter-Neumorphic)
-[![neumorphic_theme](./medias/toggleTheme.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neumorphic_theme](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/toggleDark.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neumorphic_theme](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/toggleTheme.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 ```dart
 NeumorphicTheme(
@@ -421,7 +421,7 @@ class MyApp extends StatelessWidget {
 
 # What's neumorphic
 
-[![neumorphic](./medias/neumorphic.jpg)]()
+[![neumorphic](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/neumorphic.jpg)]()
 
 ## Material Cards
 
@@ -431,7 +431,7 @@ A Modern / Material (upgraded) card usually is a surface floating on top of our 
 
 Neumorphic card however pretends to extrude from the background. It’s a raised shape made from the exact same material as the background. When we look at it from the side we see that it doesn’t “float”.
 
-[![neumorphic_button](./medias/button_press.gif)](https://github.com/Idean/Flutter-Neumorphic)
+[![neumorphic_button](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/button_press.gif)](https://github.com/Idean/Flutter-Neumorphic)
 
 Here's a Nereumorphic Button tap (slowed x2) from the sample app, you can see how the element seems to change its depth to its surface.
 
@@ -441,12 +441,12 @@ Here's a Nereumorphic Button tap (slowed x2) from the sample app, you can see ho
 
 |                                                                                | Contributors |
 |:------------------------------------------------------------------------------:|--------------|
-| [![florent](./medias/contributors/florent.jpeg)](https://github.com/florent37) | [Florent Champigny](https://github.com/florent37) |
-| [![olivier](./medias/contributors/olivier.png)](https://github.com/Debilobob)  | [Olivier Bonvila](https://github.com/Debilobob)  |
-| [![gyl](./medias/contributors/gyl.png)](https://github.com/almighty972)        | [Gyl Jean Lambert](https://github.com/almighty972)  |
-| [![jaumard](./medias/contributors/jaumard.jpeg)](https://github.com/jaumard)    | [Jimmy Aumard](https://github.com/jaumard)  |
-| [![Overman775](./medias/contributors/overman775.jpeg)](https://github.com/Overman775)    | [Overman775](https://github.com/Overman775)  |
-| [![schopy](./medias/contributors/schopy.jpeg)](https://github.com/schopy)    | [schopy](https://github.com/schopy)  |
+| [![florent](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/florent.jpeg)](https://github.com/florent37) | [Florent Champigny](https://github.com/florent37) |
+| [![olivier](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/olivier.png)](https://github.com/Debilobob)  | [Olivier Bonvila](https://github.com/Debilobob)  |
+| [![gyl](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/gyl.png)](https://github.com/almighty972)        | [Gyl Jean Lambert](https://github.com/almighty972)  |
+| [![jaumard](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/jaumard.jpeg)](https://github.com/jaumard)    | [Jimmy Aumard](https://github.com/jaumard)  |
+| [![Overman775](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/overman775.jpeg)](https://github.com/Overman775)    | [Overman775](https://github.com/Overman775)  |
+| [![schopy](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/contributors/schopy.jpeg)](https://github.com/schopy)    | [schopy](https://github.com/schopy)  |
 
 
 ## 📄 License
@@ -457,4 +457,4 @@ See [LICENSE](./LICENSE) for details.
 
 If you use the open-source library in your project, please make sure to credit and backlink to www.idean.com
 
-[![bottom_banner](./medias/bottom_banner.png)](https://www.idean.com)
+[![bottom_banner](https://github.com/Idean/Flutter-Neumorphic/blob/master/medias/bottom_banner.png)](https://www.idean.com)
