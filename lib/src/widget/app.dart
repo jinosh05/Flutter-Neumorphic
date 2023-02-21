@@ -1,54 +1,6 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class NeumorphicApp extends StatelessWidget {
-  final String title;
-  final ThemeMode themeMode;
-  final NeumorphicThemeData theme;
-  final NeumorphicThemeData darkTheme;
-  final ThemeData? materialDarkTheme;
-  final ThemeData? materialTheme;
-  final String? initialRoute;
-  final Color? color;
-  final Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates;
-  final Locale? locale;
-  final Widget? home;
-  final Iterable<Locale> supportedLocales;
-  final Map<String, WidgetBuilder>? routes;
-  final RouteFactory? onGenerateRoute;
-  final RouteFactory? onUnknownRoute;
-  final GenerateAppTitle? onGenerateTitle;
-  final GlobalKey<NavigatorState>? navigatorKey;
-  final List<NavigatorObserver>? navigatorObservers;
-  final InitialRouteListFactory? onGenerateInitialRoutes;
-  final bool debugShowCheckedModeBanner;
-  final Widget Function(BuildContext, Widget?)? builder;
-  final Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback;
-  final ThemeData? highContrastTheme;
-  final ThemeData? highContrastDarkTheme;
-  final LocaleListResolutionCallback? localeListResolutionCallback;
-  final bool showPerformanceOverlay;
-  final bool checkerboardRasterCacheImages;
-  final bool checkerboardOffscreenLayers;
-  final bool showSemanticsDebugger;
-  final Map<LogicalKeySet, Intent>? shortcuts;
-  final Map<Type, Action<Intent>>? actions;
-
-  /// {@macro flutter.widgets.widgetsApp.routeInformationProvider}
-  final RouteInformationProvider? routeInformationProvider;
-
-  /// {@macro flutter.widgets.widgetsApp.routeInformationParser}
-  final RouteInformationParser<Object>? routeInformationParser;
-
-  /// {@macro flutter.widgets.widgetsApp.routerDelegate}
-  final RouterDelegate<Object>? routerDelegate;
-
-  /// {@macro flutter.widgets.widgetsApp.backButtonDispatcher}
-  final BackButtonDispatcher? backButtonDispatcher;
-
-  final bool debugShowMaterialGrid;
-
-  bool get _usesRouter => routerDelegate != null;
-
   const NeumorphicApp({
     Key? key,
     this.title = '',
@@ -129,6 +81,55 @@ class NeumorphicApp extends StatelessWidget {
         initialRoute = null,
         super(key: key);
 
+  final Widget Function(BuildContext, Widget?)? builder;
+  final Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback;
+  final Map<Type, Action<Intent>>? actions;
+
+  /// {@macro flutter.widgets.widgetsApp.backButtonDispatcher}
+  final BackButtonDispatcher? backButtonDispatcher;
+
+  final bool checkerboardOffscreenLayers;
+  final bool checkerboardRasterCacheImages;
+  final Color? color;
+  final NeumorphicThemeData darkTheme;
+  final bool debugShowCheckedModeBanner;
+  final bool debugShowMaterialGrid;
+  final ThemeData? highContrastDarkTheme;
+  final ThemeData? highContrastTheme;
+  final Widget? home;
+  final String? initialRoute;
+  final Locale? locale;
+  final LocaleListResolutionCallback? localeListResolutionCallback;
+  final Iterable<LocalizationsDelegate<dynamic>>? localizationsDelegates;
+  final ThemeData? materialDarkTheme;
+  final ThemeData? materialTheme;
+  final GlobalKey<NavigatorState>? navigatorKey;
+  final List<NavigatorObserver>? navigatorObservers;
+  final InitialRouteListFactory? onGenerateInitialRoutes;
+  final RouteFactory? onGenerateRoute;
+  final GenerateAppTitle? onGenerateTitle;
+  final RouteFactory? onUnknownRoute;
+
+  /// {@macro flutter.widgets.widgetsApp.routeInformationParser}
+  final RouteInformationParser<Object>? routeInformationParser;
+
+  /// {@macro flutter.widgets.widgetsApp.routeInformationProvider}
+  final RouteInformationProvider? routeInformationProvider;
+
+  /// {@macro flutter.widgets.widgetsApp.routerDelegate}
+  final RouterDelegate<Object>? routerDelegate;
+
+  final Map<String, WidgetBuilder>? routes;
+  final Map<LogicalKeySet, Intent>? shortcuts;
+  final bool showPerformanceOverlay;
+  final bool showSemanticsDebugger;
+  final Iterable<Locale> supportedLocales;
+  final NeumorphicThemeData theme;
+  final ThemeMode themeMode;
+  final String title;
+
+  bool get _usesRouter => routerDelegate != null;
+
   ThemeData _getMaterialTheme(NeumorphicThemeData theme) {
     final color = theme.accentColor;
 
@@ -147,8 +148,6 @@ class NeumorphicApp extends StatelessWidget {
       brightness: ThemeData.estimateBrightnessForColor(theme.baseColor),
       textTheme: theme.textTheme,
       scaffoldBackgroundColor: theme.baseColor,
-      colorScheme:
-          ColorScheme.fromSwatch().copyWith(secondary: theme.variantColor),
     );
   }
 
