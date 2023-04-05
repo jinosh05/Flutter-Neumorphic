@@ -1,4 +1,4 @@
-import 'package:example/lib/ThemeConfigurator.dart';
+import 'package:example/lib/theme_configurator.dart';
 import 'package:example/lib/top_bar.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
@@ -30,7 +30,7 @@ class _Page extends StatefulWidget {
   __PageState createState() => __PageState();
 }
 
-enum Gender { MALE, FEMALE, NON_BINARY }
+enum Gender { male, female, nonBinary }
 
 class __PageState extends State<_Page> {
   String firstName = "";
@@ -312,7 +312,7 @@ class _GenderField extends StatelessWidget {
               style: const NeumorphicRadioStyle(
                 boxShape: NeumorphicBoxShape.circle(),
               ),
-              value: Gender.MALE,
+              value: Gender.male,
               child: const Icon(Icons.account_box),
               onChanged: (dynamic value) => onChanged(value),
             ),
@@ -323,7 +323,7 @@ class _GenderField extends StatelessWidget {
               style: const NeumorphicRadioStyle(
                 boxShape: NeumorphicBoxShape.circle(),
               ),
-              value: Gender.FEMALE,
+              value: Gender.female,
               child: const Icon(Icons.pregnant_woman),
               onChanged: (dynamic value) => onChanged(value),
             ),
@@ -334,7 +334,7 @@ class _GenderField extends StatelessWidget {
               style: const NeumorphicRadioStyle(
                 boxShape: NeumorphicBoxShape.circle(),
               ),
-              value: Gender.NON_BINARY,
+              value: Gender.nonBinary,
               child: const Icon(Icons.supervised_user_circle),
               onChanged: (dynamic value) => onChanged(value),
             ),

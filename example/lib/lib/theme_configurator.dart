@@ -1,6 +1,6 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-import 'ThemeColorSelector.dart';
+import 'theme_color_selector.dart';
 
 class ThemeConfigurator extends StatelessWidget {
   const ThemeConfigurator({super.key});
