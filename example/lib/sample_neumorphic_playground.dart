@@ -93,9 +93,9 @@ class __PageState extends State<_Page> {
   }
 
   Widget styleCustomizer() {
-    return Column(
+    return const Column(
       mainAxisSize: MainAxisSize.max,
-      children: const [
+      children: [
         //depthSelector(),
         //intensitySelector(),
         //surfaceIntensitySelector(),

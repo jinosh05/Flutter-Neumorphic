@@ -109,8 +109,8 @@ class __PageContentState extends State<_PageContent> {
   }
 
   Widget _buildTitle(BuildContext context) {
-    return Column(
-      children: const <Widget>[
+    return const Column(
+      children: <Widget>[
         Text(
           "Tesla",
           style: TextStyle(
@@ -132,11 +132,11 @@ class __PageContentState extends State<_PageContent> {
   Widget _buildCenterContent(BuildContext context) {
     return Stack(
       children: <Widget>[
-        Row(
+        const Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: const <Widget>[
+          children: <Widget>[
             Text(
               "297",
               style: TextStyle(
