@@ -22,7 +22,7 @@ class NeumorphicBackground extends StatelessWidget {
   final Color backendColor;
   final BorderRadius? borderRadius;
 
-  const NeumorphicBackground({
+  const NeumorphicBackground({super.key, 
     this.child,
     this.padding,
     this.margin,
@@ -33,15 +33,15 @@ class NeumorphicBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: this.margin,
-      color: this.backendColor,
+      padding: margin,
+      color: backendColor,
       child: ClipRRect(
-        borderRadius: this.borderRadius ?? BorderRadius.circular(0),
+        borderRadius: borderRadius ?? BorderRadius.circular(0),
         child: AnimatedContainer(
           color: NeumorphicTheme.baseColor(context),
-          padding: this.padding,
+          padding: padding,
           duration: const Duration(milliseconds: 100),
-          child: this.child,
+          child: child,
         ),
       ),
     );

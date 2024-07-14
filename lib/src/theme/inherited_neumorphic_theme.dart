@@ -7,11 +7,12 @@ typedef NeumorphicThemeUpdater = NeumorphicThemeData Function(
     NeumorphicThemeData? current);
 
 class NeumorphicThemeInherited extends InheritedWidget {
+  @override
   final Widget child;
   final ThemeWrapper value;
   final ValueChanged<ThemeWrapper> onChanged;
 
-  NeumorphicThemeInherited(
+  const NeumorphicThemeInherited(
       {Key? key,
       required this.child,
       required this.value,
@@ -22,7 +23,7 @@ class NeumorphicThemeInherited extends InheritedWidget {
   bool updateShouldNotify(NeumorphicThemeInherited old) => value != old.value;
 
   NeumorphicThemeData? get current {
-    return this.value.current;
+    return value.current;
   }
 
   bool get isUsingDark {
@@ -32,18 +33,18 @@ class NeumorphicThemeInherited extends InheritedWidget {
   ThemeMode get themeMode => value.themeMode;
 
   set themeMode(ThemeMode currentTheme) {
-    this.onChanged(value.copyWith(currentTheme: currentTheme));
+    onChanged(value.copyWith(currentTheme: currentTheme));
   }
 
   void updateCurrentTheme(NeumorphicThemeData update) {
     if (value.useDark) {
       final newValue = value.copyWith(darkTheme: update);
       //this.value = newValue;
-      this.onChanged(newValue);
+      onChanged(newValue);
     } else {
       final newValue = value.copyWith(theme: update);
       //this.value = newValue;
-      this.onChanged(newValue);
+      onChanged(newValue);
     }
   }
 
@@ -52,11 +53,11 @@ class NeumorphicThemeInherited extends InheritedWidget {
     if (value.useDark) {
       final newValue = value.copyWith(darkTheme: update);
       //this.value = newValue;
-      this.onChanged(newValue);
+      onChanged(newValue);
     } else {
       final newValue = value.copyWith(theme: update);
       //this.value = newValue;
-      this.onChanged(newValue);
+      onChanged(newValue);
     }
   }
 }

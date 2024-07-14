@@ -3,7 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'button.dart';
 import 'container.dart';
 
-typedef void NeumorphicRadioListener<T>(T value);
+typedef NeumorphicRadioListener<T> = void Function(T value);
 
 /// A Style used to customize a [NeumorphicRadio]
 ///
@@ -162,7 +162,7 @@ class NeumorphicRadio<T> extends StatelessWidget {
   final Duration duration;
   final Curve curve;
 
-  NeumorphicRadio({
+  const NeumorphicRadio({super.key, 
     this.child,
     this.style = const NeumorphicRadioStyle(),
     this.value,
@@ -215,7 +215,6 @@ class NeumorphicRadio<T> extends StatelessWidget {
       padding: this.padding,
       pressed: isSelected,
       minDistance: selectedDepth,
-      child: this.child,
       style: NeumorphicStyle(
         border: this.style.border,
         color: color,
@@ -226,6 +225,7 @@ class NeumorphicRadio<T> extends StatelessWidget {
         depth: depth,
         shape: this.style.shape ?? NeumorphicShape.flat,
       ),
+      child: this.child,
     );
   }
 }

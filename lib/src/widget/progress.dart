@@ -98,7 +98,7 @@ class NeumorphicProgress extends StatefulWidget {
       this.duration = const Duration(milliseconds: 300),
       this.style = const ProgressStyle(),
       this.curve = Curves.easeOutCubic})
-      : this._percent = percent,
+      : _percent = percent,
         super(key: key);
 
   @override
@@ -348,9 +348,9 @@ class _GradientProgress extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: this.borderRadius,
+        borderRadius: borderRadius,
         gradient: LinearGradient(
-            begin: this.begin, end: this.end, colors: this.colors),
+            begin: begin, end: end, colors: colors),
       ),
     );
   }

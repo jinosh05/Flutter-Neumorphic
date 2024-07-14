@@ -1,6 +1,6 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
-typedef void NeumorphicSliderListener(double percent);
+typedef NeumorphicSliderListener = void Function(double percent);
 
 /// A style to customize the [NeumorphicSlider]
 ///
@@ -110,8 +110,8 @@ class NeumorphicSlider extends StatefulWidget {
   final Widget? thumb;
   final double? sliderHeight;
 
-  NeumorphicSlider({
-    Key? key,
+  const NeumorphicSlider({
+    super.key,
     this.style = const SliderStyle(),
     this.min = 0,
     this.value = 0,
@@ -207,7 +207,7 @@ class _NeumorphicSliderState extends State<NeumorphicSlider> {
         border: widget.style.thumbBorder,
         lightSource: widget.style.lightSource ?? theme.lightSource,
         color: widget.style.accent ?? theme.accentColor,
-        boxShape: NeumorphicBoxShape.circle(),
+        boxShape: const NeumorphicBoxShape.circle(),
       ),
       child: SizedBox(
         height: size,

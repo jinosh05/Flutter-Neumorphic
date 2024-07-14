@@ -43,8 +43,8 @@ class NeumorphicTheme extends StatefulWidget {
   final Widget child;
   final ThemeMode themeMode;
 
-  NeumorphicTheme({
-    Key? key,
+  const NeumorphicTheme({
+    super.key,
     required this.child,
     this.theme = neumorphicDefaultTheme,
     this.darkTheme = neumorphicDefaultDarkTheme,
