@@ -60,7 +60,7 @@ class Neumorphic extends StatelessWidget {
       drawSurfaceAboveChild; //if true => boxDecoration & foreground decoration, else => boxDecoration does all the work
 
   const Neumorphic({
-    Key? key,
+    super.key,
     this.child,
     this.duration = Neumorphic.DEFAULT_DURATION,
     this.curve = Neumorphic.DEFAULT_CURVE,
@@ -69,7 +69,7 @@ class Neumorphic extends StatelessWidget {
     this.margin = const EdgeInsets.all(0),
     this.padding = const EdgeInsets.all(0),
     this.drawSurfaceAboveChild = true,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -102,7 +102,6 @@ class _NeumorphicContainer extends StatelessWidget {
   final EdgeInsets padding;
 
   const _NeumorphicContainer({
-    Key? key,
     this.child,
     this.textStyle,
     required this.padding,
@@ -111,7 +110,7 @@ class _NeumorphicContainer extends StatelessWidget {
     required this.curve,
     required this.style,
     required this.drawSurfaceAboveChild,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

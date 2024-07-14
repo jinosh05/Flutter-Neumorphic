@@ -151,7 +151,7 @@ class NeumorphicToggle extends StatelessWidget {
 
   const NeumorphicToggle({
     this.style = const NeumorphicToggleStyle(),
-    Key? key,
+    super.key,
     required this.children,
     required this.thumb,
     this.padding = const EdgeInsets.all(2),
@@ -165,7 +165,7 @@ class NeumorphicToggle extends StatelessWidget {
     this.width,
     this.isEnabled = true,
     this.displayForegroundOnlyIfSelected = true,
-  }) : super(key: key);
+  });
 
   Widget _buildStack(BuildContext context) {
     return Stack(

@@ -79,7 +79,7 @@ class NeumorphicAppBar extends StatefulWidget implements PreferredSizeWidget {
   final double padding;
 
   const NeumorphicAppBar({
-    Key? key,
+    super.key,
     this.title,
     this.buttonPadding,
     this.buttonStyle,
@@ -93,8 +93,7 @@ class NeumorphicAppBar extends StatefulWidget implements PreferredSizeWidget {
     this.titleSpacing = NavigationToolbar.kMiddleSpacing,
     this.actionSpacing = defaultSpacing,
     this.padding = 16,
-  })  : preferredSize = const Size.fromHeight(toolbarHeight),
-        super(key: key);
+  })  : preferredSize = const Size.fromHeight(toolbarHeight);
 
   @override
   NeumorphicAppBarState createState() => NeumorphicAppBarState();

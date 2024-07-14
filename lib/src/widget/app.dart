@@ -2,7 +2,7 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 class NeumorphicApp extends StatelessWidget {
   const NeumorphicApp({
-    Key? key,
+    super.key,
     this.title = '',
     this.color,
     this.initialRoute,
@@ -38,11 +38,10 @@ class NeumorphicApp extends StatelessWidget {
   })  : routeInformationProvider = null,
         routeInformationParser = null,
         routerDelegate = null,
-        backButtonDispatcher = null,
-        super(key: key);
+        backButtonDispatcher = null;
 
   const NeumorphicApp.router({
-    Key? key,
+    super.key,
     required RouterDelegate<Object> this.routerDelegate,
     required RouteInformationParser<Object> this.routeInformationParser,
     this.routeInformationProvider,
@@ -78,8 +77,7 @@ class NeumorphicApp extends StatelessWidget {
         onGenerateInitialRoutes = null,
         onUnknownRoute = null,
         routes = null,
-        initialRoute = null,
-        super(key: key);
+        initialRoute = null;
 
   final Widget Function(BuildContext, Widget?)? builder;
   final Locale? Function(Locale?, Iterable<Locale>)? localeResolutionCallback;
