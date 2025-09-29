@@ -22,15 +22,15 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
   final bool drawShadow;
   final bool drawBackground;
 
-  NeumorphicEmbossDecorationPainter(
-      {required this.style,
-      required this.drawBackground,
-      required this.drawShadow,
-      required VoidCallback onChanged,
-      NeumorphicBoxShape? shape})
-      : shape = shape ?? const NeumorphicBoxShape.rect(),
-        _cache = NeumorphicEmbossPainterCache(),
-        super(onChanged) {
+  NeumorphicEmbossDecorationPainter({
+    required this.style,
+    required this.drawBackground,
+    required this.drawShadow,
+    required VoidCallback onChanged,
+    NeumorphicBoxShape? shape,
+  }) : shape = shape ?? const NeumorphicBoxShape.rect(),
+       _cache = NeumorphicEmbossPainterCache(),
+       super(onChanged) {
     _generatePainters();
   }
 
@@ -47,24 +47,29 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
       ..style = PaintingStyle.stroke;
   }
 
-  void _updateCache(
-      {required Offset offset,
-      required ImageConfiguration configuration,
-      required NeumorphicStyle newStyle}) {
+  void _updateCache({
+    required Offset offset,
+    required ImageConfiguration configuration,
+    required NeumorphicStyle newStyle,
+  }) {
     bool invalidateSize = false;
     if (configuration.size != null) {
-      invalidateSize = _cache
-          .updateSize(newOffset: offset, newSize: configuration.size!);
+      invalidateSize = _cache.updateSize(
+        newOffset: offset,
+        newSize: configuration.size!,
+      );
       if (invalidateSize) {
         _cache.updatePath(
-            newPath:
-                shape.customShapePathProvider.getPath(configuration.size!));
+          newPath: shape.customShapePathProvider.getPath(configuration.size!),
+        );
       }
     }
 
     bool invalidateLightSource = false;
-    invalidateLightSource = _cache
-        .updateLightSource(style.lightSource, style.oppositeShadowLightSource);
+    invalidateLightSource = _cache.updateLightSource(
+      style.lightSource,
+      style.oppositeShadowLightSource,
+    );
 
     bool invalidateColor = false;
     if (style.color != null) {
@@ -83,12 +88,12 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
     }
 
     final bool invalidateShadowColors = _cache.updateShadowColor(
-          newShadowLightColorEmboss:
-              style.shadowLightColorEmboss ?? const Color(0xFFFFFFFF),
-          newShadowDarkColorEmboss:
-              style.shadowDarkColorEmboss ?? const Color(0xFF000000),
-          newIntensity: style.intensity ?? 0.25,
-        );
+      newShadowLightColorEmboss:
+          style.shadowLightColorEmboss ?? const Color(0xFFFFFFFF),
+      newShadowDarkColorEmboss:
+          style.shadowDarkColorEmboss ?? const Color(0xFF000000),
+      newIntensity: style.intensity ?? 0.25,
+    );
     if (invalidateShadowColors) {
       if (_cache.shadowLightColor != null) {
         _whiteShadowPaint.color = _cache.shadowLightColor!;
@@ -111,17 +116,21 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
       ..restore();
   }
 
-  void _drawBorder(
-      {required Canvas canvas, required Offset offset, required Path path}) {
+  void _drawBorder({
+    required Canvas canvas,
+    required Offset offset,
+    required Path path,
+  }) {
     if (style.border.width != null && style.border.width! > 0) {
       canvas
         ..save()
         ..translate(offset.dx, offset.dy)
         ..drawPath(
-            path,
-            _borderPaint
-              ..color = style.border.color ?? const Color(0x00000000)
-              ..strokeWidth = style.border.width ?? 0)
+          path,
+          _borderPaint
+            ..color = style.border.color ?? const Color(0x00000000)
+            ..strokeWidth = style.border.width ?? 0,
+        )
         ..restore();
     }
   }
@@ -135,7 +144,9 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
       ..translate(_cache.originOffset.dx, _cache.originOffset.dy)
       ..drawPath(path, _whiteShadowPaint)
       ..translate(
-          _cache.witheShadowLeftTranslation, _cache.witheShadowTopTranslation)
+        _cache.witheShadowLeftTranslation,
+        _cache.witheShadowTopTranslation,
+      )
       ..drawPath(path.transform(matrix4.storage), _whiteShadowMaskPaint)
       ..restore();
 
@@ -144,15 +155,16 @@ class NeumorphicEmbossDecorationPainter extends BoxPainter {
       ..translate(_cache.originOffset.dx, _cache.originOffset.dy)
       ..drawPath(path, _blackShadowPaint)
       ..translate(
-          _cache.blackShadowLeftTranslation, _cache.blackShadowTopTranslation)
+        _cache.blackShadowLeftTranslation,
+        _cache.blackShadowTopTranslation,
+      )
       ..drawPath(path.transform(matrix4.storage), _blackShadowMaskPaint)
       ..restore();
   }
 
   @override
   void paint(Canvas canvas, Offset offset, ImageConfiguration configuration) {
-    _updateCache(
-        offset: offset, configuration: configuration, newStyle: style);
+    _updateCache(offset: offset, configuration: configuration, newStyle: style);
     for (var subPath in _cache.subPaths) {
       if (drawBackground) {
         _paintBackground(canvas, subPath);

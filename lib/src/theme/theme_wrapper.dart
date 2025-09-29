@@ -1,14 +1,10 @@
-import 'dart:ui';
-
-import 'package:flutter/material.dart';
-
-import 'theme.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 
 export 'theme.dart';
 
-/// A immutable contained by the NeumorhicTheme
-/// That will save the current definition of the theme
-/// It will be accessible to the childs widgets by an InheritedWidget
+/// Immutable container for the current neumorphic theme.
+/// Accessible to child widgets by an InheritedWidget.
 class ThemeWrapper {
   final NeumorphicThemeData theme;
   final NeumorphicThemeData? darkTheme;
@@ -20,15 +16,15 @@ class ThemeWrapper {
     this.themeMode = ThemeMode.system,
   });
 
-  bool get useDark =>
-      //forced to use DARK by user
-      themeMode == ThemeMode.dark ||
-      //The setting indicating the current brightness mode of the host platform. If the platform has no preference, platformBrightness defaults to Brightness.light.
-      (themeMode == ThemeMode.system &&
-          window.platformBrightness == Brightness.dark);
+  bool getUseDark() {
+    final brightness = PlatformDispatcher.instance.platformBrightness;
 
-  NeumorphicThemeData? get current {
-    if (useDark) {
+    return themeMode == ThemeMode.dark ||
+        (themeMode == ThemeMode.system && brightness == Brightness.dark);
+  }
+
+  NeumorphicThemeData? getCurrentTheme() {
+    if (getUseDark()) {
       return darkTheme;
     } else {
       return theme;

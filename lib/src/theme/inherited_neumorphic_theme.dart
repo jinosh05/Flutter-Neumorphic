@@ -3,8 +3,8 @@ import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 export 'theme.dart';
 export 'theme_wrapper.dart';
 
-typedef NeumorphicThemeUpdater = NeumorphicThemeData Function(
-    NeumorphicThemeData? current);
+typedef NeumorphicThemeUpdater =
+    NeumorphicThemeData Function(NeumorphicThemeData? current);
 
 class NeumorphicThemeInherited extends InheritedWidget {
   @override
@@ -12,22 +12,22 @@ class NeumorphicThemeInherited extends InheritedWidget {
   final ThemeWrapper value;
   final ValueChanged<ThemeWrapper> onChanged;
 
-  const NeumorphicThemeInherited(
-      {super.key,
-      required this.child,
-      required this.value,
-      required this.onChanged})
-      : super(child: child);
+  const NeumorphicThemeInherited({
+    super.key,
+    required this.child,
+    required this.value,
+    required this.onChanged,
+  }) : super(child: child);
 
   @override
   bool updateShouldNotify(NeumorphicThemeInherited old) => value != old.value;
 
   NeumorphicThemeData? get current {
-    return value.current;
+    return value.theme;
   }
 
   bool get isUsingDark {
-    return value.useDark;
+    return value.theme == value.darkTheme;
   }
 
   ThemeMode get themeMode => value.themeMode;
@@ -37,7 +37,7 @@ class NeumorphicThemeInherited extends InheritedWidget {
   }
 
   void updateCurrentTheme(NeumorphicThemeData update) {
-    if (value.useDark) {
+    if (value.getUseDark()) {
       final newValue = value.copyWith(darkTheme: update);
       //this.value = newValue;
       onChanged(newValue);
@@ -49,8 +49,8 @@ class NeumorphicThemeInherited extends InheritedWidget {
   }
 
   void update(NeumorphicThemeUpdater themeUpdater) {
-    final update = themeUpdater(value.current);
-    if (value.useDark) {
+    final update = themeUpdater(value.theme);
+    if (value.getUseDark()) {
       final newValue = value.copyWith(darkTheme: update);
       //this.value = newValue;
       onChanged(newValue);

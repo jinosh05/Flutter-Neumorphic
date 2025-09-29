@@ -241,7 +241,7 @@ class __PageState extends State<_Page> {
     const Color buttonInnactiveColor = Colors.white;
 
     const Color iconActiveColor = Colors.white;
-    final Color iconInactiveColor = Colors.black.withOpacity(0.3);
+    final Color iconInactiveColor = Colors.black.withValues(alpha: 0.3);
 
     return Row(
       mainAxisSize: MainAxisSize.max,

@@ -111,7 +111,7 @@ class __PageState extends State<_Page> {
     const Color buttonInnactiveColor = Colors.white;
 
     const Color textActiveColor = Colors.white;
-    final Color textInactiveColor = Colors.black.withOpacity(0.3);
+    final Color textInactiveColor = Colors.black.withValues(alpha: 0.3);
 
     return Card(
       margin: const EdgeInsets.all(8),
@@ -522,7 +522,7 @@ class __PageState extends State<_Page> {
     const Color buttonInnactiveColor = Colors.white;
 
     const Color iconActiveColor = Colors.white;
-    final Color iconInactiveColor = Colors.black.withOpacity(0.3);
+    final Color iconInactiveColor = Colors.black.withValues(alpha: 0.3);
 
     return Row(
       mainAxisSize: MainAxisSize.max,
